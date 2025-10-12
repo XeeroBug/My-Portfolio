@@ -43,7 +43,9 @@ export function ContactSection() {
       }
     } catch (error) {
       setStatus("ERROR");
-      toast.error("Network error.")
+      console.log(error);
+      
+      toast.error(`Network error.`);
     }
   };
   return (
@@ -58,7 +60,7 @@ export function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-muted-foreground text-lg">
-            Have a project in mind? Let's work together
+            Have a project in mind? Let&apos;s work together
           </p>
         </motion.div>
 

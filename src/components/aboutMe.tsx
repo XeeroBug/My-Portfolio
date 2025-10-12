@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Testimonial } from "./mentors";
 import MyPic from "@/assets/images/animated-pic.png";
 import { BackgroundGradient } from "./ui/background-gradient";
+import Image from "next/image";
 
 export function AboutMe() {
   return (
@@ -18,7 +19,7 @@ export function AboutMe() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
 
           <BackgroundGradient className="rounded-3xl grid grid-cols-3 p-4 sm:p-10 bg-secondary">
-            <img
+            <Image
               src={MyPic.src}
               alt="my-pic"
               className="object-contain size-96  rounded-2xl"

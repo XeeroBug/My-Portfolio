@@ -3,9 +3,7 @@ import nodemailer from "nodemailer";
 
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
-    console.log("hitted");
-    
+export async function POST(req: Request) {    
   const { name, email, message } = await req.json();
   // Create a test account or replace with real credentials.
   const transporter = nodemailer.createTransport({
@@ -18,7 +16,7 @@ export async function POST(req: Request) {
     },
   });
 
-  transporter.verify((error, success) => {
+  transporter.verify((error) => {
     if (error) {
       console.error("SMTP error:", error);
     } else {

@@ -5,6 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import Img1 from "@/assets/images/img1.png";
 import Img2 from "@/assets/images/img2.webp";
 import Img3 from "@/assets/images/img3.webp";
+import Image from "next/image";
 
 export function ProjectsSection() {
   const projects = [
@@ -65,7 +66,7 @@ export function ProjectsSection() {
             >
               <Card className="overflow-hidden h-full flex flex-col bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all group">
                 <div className="relative overflow-hidden aspect-video">
-                  <img
+                  <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

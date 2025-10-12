@@ -1,8 +1,7 @@
 import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BackgroundRippleEffect } from "./ui/background-ripple-effect";
 
 export function HeroSection() {
   return (
@@ -59,20 +58,3 @@ export function HeroSection() {
     </section>
   );
 }
-
-const XIcon = ({ size = 24, color = "currentColor", className = "" }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill={color}
-      className={className}
-      aria-hidden="true"
-      role="img"
-    >
-      <path d="M18.244 2H21.5l-7.312 8.39L22 22h-5.998l-4.662-6.08L6.09 22H2.833l7.828-8.975L2 2h6.097l4.17 5.557L18.244 2zm-1.05 18h1.666L8.13 3.906H6.347l10.847 16.094z" />
-    </svg>
-  );
-};

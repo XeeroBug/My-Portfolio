@@ -1,3 +1,4 @@
+import Image from "next/image";
 import shadcn from "./shadcn-logo_svgstack_com_31341760198540.svg";
 export const FigmaIcon = () => {
   return (
@@ -691,7 +692,7 @@ export const NetlifyIcon = () => {
 export const ShadcnIcon = () => {
   return (
     <>
-      <img src={shadcn.src} alt="shadcn logo" />
+      <Image src={shadcn.src} alt="shadcn logo" />
     </>
   );
 };
