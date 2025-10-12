@@ -15,7 +15,7 @@ export function ProjectsSection() {
       tags: ["React.js", "Tailwind", "Express.js", "MongoDB"],
       image: Img1.src,
       github: "https://github.com/XeeroBug/CRS_web",
-      live: "#",
+      live: "https://myclimateguardian.netlify.app/",
     },
     {
       title: "Pkeeps",

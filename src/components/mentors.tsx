@@ -14,14 +14,14 @@ export function Testimonial() {
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+        "Usama has shown excellent progress throughout his time here. His ability to adapt quickly, collaborate effectively, and maintain a professional attitude makes him stand out. I’m confident he will succeed in any future endeavor he pursue.",
       name: "Muftahuddeen Abba",
       designation: "Head of Cloud at StoneTech Square",
       src: legend.src,
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+        "Usama consistently demonstrates a strong commitment to learning and growth. He approaches every task with enthusiasm, takes feedback constructively, and shows great initiative in solving problems independently. It has been a pleasure to mentor such a driven and capable individual",
       name: "Ibrahim Tajuddeen",
       designation: "Software Developer at StoneTech Square",
       src: nexocode.src,
