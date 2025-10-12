@@ -59,7 +59,7 @@ export const Dock = () => {
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://x.com/AbdulUsama12433?t=wKD_uOmjgM5sypBUVN_x-g&s=09",
     },
     {
       title: "GitHub",
