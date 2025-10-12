@@ -7,7 +7,7 @@ export function Testimonial() {
   const testimonials = [
     {
       quote:
-        "Passionate about mobile technology from a young age, my curiosity led me to experiment with Android devices, diving into AOSP and custom ROMs. This journey evolved into app development using Kotlin, Swift, and Flutter, strengthening my expertise in both front-end and back-end. Committed to open-source principles, I actively contribute to projects aligned with my beliefs, showcasing a diverse skill set in programming, markup, and scripting languages.",
+        "What stood out most about Usama was his curiosity and willingness to dig deeper, not just to get things working, but to truly understand how and why they work. Whether tackling complex bugs or collaborating with teammates, he brought a calm, thoughtful approach that made a real impact. His growth mindset is something I genuinely admire.",
       name: "Mubarak Ibrahim",
       designation: "CTO at StoneTech Square",
       src: cto.src,
