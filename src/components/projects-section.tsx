@@ -2,9 +2,8 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import Img1 from "@/assets/images/img1.png";
-import Img2 from "@/assets/images/img2.webp";
-import Img3 from "@/assets/images/img3.webp";
+import Img1 from "@/assets/images/climateGuardian.png";
+import Img2 from "@/assets/images/pkeeps.png";
 import Image from "next/image";
 
 export function ProjectsSection() {
@@ -19,22 +18,13 @@ export function ProjectsSection() {
       live: "#",
     },
     {
-      title: "AI Chat Application",
+      title: "Pkeeps",
       description:
-        "Real-time chat application with AI-powered responses, user authentication, and message history.",
-      tags: ["React", "OpenAI", "Firebase", "Framer Motion"],
+        "Pkeeps is a digital legacy platform designed to transfer your most important assets to the people you trust, when it matters most.",
+      tags: ["Next.js", "Shadcn", "Supabase", "Flutter wave"],
       image: Img2.src,
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Project Management Tool",
-      description:
-        "Collaborative project management platform with kanban boards, team collaboration, and time tracking.",
-      tags: ["Next.js", "Supabase", "Shadcn UI", "TypeScript"],
-      image: Img3.src,
-      github: "#",
-      live: "#",
+      // github: "",
+      live: "https://www.pkeeps.com",
     },
   ];
   return (
@@ -89,7 +79,11 @@ export function ProjectsSection() {
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button
                         variant="outline"
                         size="sm"

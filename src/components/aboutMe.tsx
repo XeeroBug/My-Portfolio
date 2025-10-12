@@ -17,14 +17,20 @@ export function AboutMe() {
           className="text-center mb-16 "
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
-
-          <BackgroundGradient className="rounded-3xl grid grid-cols-3 p-4 sm:p-10 bg-secondary">
-            <Image
-              src={MyPic.src}
-              alt="my-pic"
-              className="object-contain size-96  rounded-2xl"
-            />
-            <p className="text-muted-foreground text-2xl col-span-2">
+          {/* <Image
+                src={MyPic.src}
+                alt="my-pic"
+                className="w-full h-full rounded-2xl sm:mx-auto"
+              /> */}
+          <BackgroundGradient className="rounded-3xl lg:grid lg:grid-cols-3 gap-6 p-4 sm:p-10 bg-secondary">
+            <div className="flex items-center justify-center w-full mb-6">
+              <Image
+                src={MyPic.src}
+                alt="my-pic"
+                className="w-full h-full rounded-2xl sm:mx-auto"
+              />
+            </div>
+            <p className="text-muted-foreground text-center col-span-2 text-xl md:text-2xl lg:col-span-2 md:col-span-1 flex ">
               Hi, I’m Usama Abdulhakeem, a passionate Full Stack Developer who
               loves building secure, scalable, and user-friendly applications. I
               work with React, NextJs, NestJS, MongoDB and others to create
