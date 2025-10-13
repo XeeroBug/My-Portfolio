@@ -93,10 +93,16 @@ export function ProjectsSection() {
                         Code
                       </Button>
                     </a>
-                    <Button size="sm" className="gap-2">
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </Button>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button size="sm" className="gap-2">
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </Card>
