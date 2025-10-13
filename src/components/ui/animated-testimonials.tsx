@@ -1,5 +1,5 @@
 "use client";
-import { IconArrowLeft, IconArrowRight } from   "@tabler/icons-react";
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 
@@ -31,7 +31,6 @@ export const AnimatedTestimonials = ({
   const isActive = (index: number) => {
     return index === active;
   };
-  
 
   useEffect(() => {
     if (autoplay) {
@@ -164,4 +163,3 @@ export const AnimatedTestimonials = ({
     </div>
   );
 };
-
