@@ -18,7 +18,7 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <TextRevealCard
-            className="mb-4 sm:mb-6"
+            className="mb-4 sm:mb-6 text-center"
             text="Usama Abdulhakeem"
             revealText="Turning ideas into solutions. One line of code at a time. "
           ></TextRevealCard>
