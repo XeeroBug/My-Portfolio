@@ -23,7 +23,7 @@ import {
   VercelIcon,
   NetlifyIcon,
   ShadcnIcon,
-  FramerIcon
+  FramerIcon,
 } from "@/assets/icons/icons";
 const techCategories = [
   {
@@ -80,11 +80,8 @@ const techCategories = [
   },
   {
     title: "Runtime",
-    items: [
-      { name: "Node", icon: <NodeIcon /> },
-    ],
+    items: [{ name: "Node", icon: <NodeIcon /> }],
   },
- 
 ];
 
 const container = {
@@ -104,17 +101,22 @@ const item = {
 
 export function TechStack() {
   return (
-    <section className="py-20 px-4 relative" id="tech-stack">
+    <section
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative"
+      id="tech-stack"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Tech Stack</h2>
-          <p className="text-muted-foreground text-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+            Tech Stack
+          </h2>
+          <p className="text-muted-foreground text-base sm:text-lg">
             Technologies and tools I work with
           </p>
         </motion.div>
@@ -124,23 +126,23 @@ export function TechStack() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {techCategories.map((category) => (
             <motion.div key={category.title} variants={item}>
-              <Card className="p-6 h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-colors">
-                <h3 className="text-xl font-semibold mb-6 text-primary">
+              <Card className="p-4 sm:p-6 h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-colors">
+                <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-primary">
                   {category.title}
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {category.items.map((tech) => (
                     <motion.div
                       key={tech.name}
                       whileHover={{ scale: 1.05 }}
-                      className="flex flex-col items-center gap-2 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors cursor-pointer"
+                      className="flex flex-col items-center gap-2 p-3 sm:p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors cursor-pointer"
                     >
-                      <div className="size-16">{tech.icon}</div>
-                      <span className="text-sm text-center font-medium">
+                      <div className="size-12 sm:size-16">{tech.icon}</div>
+                      <span className="text-xs sm:text-sm text-center font-medium">
                         {tech.name}
                       </span>
                     </motion.div>
