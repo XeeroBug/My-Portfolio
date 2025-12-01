@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
 
       {/* Grid pattern overlay */}
@@ -18,14 +18,14 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <TextRevealCard
-            className="mb-6"
+            className="mb-4 sm:mb-6"
             text="Usama Abdulhakeem"
             revealText="Turning ideas into solutions. One line of code at a time. "
           ></TextRevealCard>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-4 font-light">
+          <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-3 sm:mb-4 font-light">
             Full Stack Developer
           </p>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12 px-4 sm:px-0 leading-relaxed">
             Building exceptional digital experiences with modern technologies.
             Passionate about clean code, beautiful design, and innovative
             solutions.
@@ -36,7 +36,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-wrap gap-4 justify-center mb-12"
+          className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mb-8 sm:mb-12"
         >
           <a href="#contact">
             <Button size="lg" className="gap-2">
