@@ -69,13 +69,13 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-transparent border rounded-lg p-8 relative overflow-hidden",
+        "bg-transparent border rounded-lg p-4 sm:p-6 md:p-8 relative overflow-hidden",
         className
       )}
     >
       {children}
 
-      <div className="h-40  relative flex items-center overflow-hidden">
+      <div className="h-32 sm:h-36 md:h-40 relative flex items-center overflow-hidden">
         <motion.div
           style={{
             width: "100%",
@@ -97,7 +97,7 @@ export const TextRevealCard = ({
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
-            className="text-base sm:text-[3rem] py-10 font-bold  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] py-6 sm:py-8 md:py-10 font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
           >
             {revealText}
           </p>
@@ -109,11 +109,11 @@ export const TextRevealCard = ({
             opacity: widthPercentage > 0 ? 1 : 0,
           }}
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
+          className="h-32 sm:h-36 md:h-40 w-[6px] sm:w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
-        <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="text-5xl sm:text-[3rem] py-10 font-bold  text-transparent bg-[#323238]  md:text-8xl mb-6 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text">
+        <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3rem] 2xl:text-8xl py-6 sm:py-8 md:py-10 font-bold text-transparent bg-[#323238] mb-4 sm:mb-6 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text">
             {text}
           </p>
           <MemoizedStars />
