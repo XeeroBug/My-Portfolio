@@ -43,7 +43,7 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            className="absolute inset-x-0 bottom-full mb-2 sm:mb-4 flex flex-col gap-2 max-h-[60vh] overflow-y-auto px-2"
           >
             {items.map((item, idx) => (
               <motion.div
@@ -65,9 +65,16 @@ const FloatingDockMobile = ({
                 <a
                   href={item.href}
                   key={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  target={item.href.startsWith("http") ? "_blank" : "_self"}
+                  rel={
+                    item.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900 hover:scale-110 transition-transform active:scale-95"
+                  onClick={() => setOpen(false)}
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <div className="h-4 w-4 sm:h-5 sm:w-5">{item.icon}</div>
                 </a>
               </motion.div>
             ))}
@@ -76,9 +83,10 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800 hover:scale-110 transition-transform active:scale-95"
+        aria-label="Toggle navigation menu"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-5 w-5 sm:h-6 sm:w-6 text-neutral-500 dark:text-neutral-400" />
       </button>
     </div>
   );
@@ -97,7 +105,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-secondary px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-14 sm:h-16 items-end gap-2 sm:gap-4 rounded-2xl bg-secondary px-3 sm:px-4 pb-2 sm:pb-3 md:flex dark:bg-neutral-900",
         className
       )}
     >
@@ -130,7 +138,11 @@ function IconContainer({
   const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
   const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
-  const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  const widthTransformIcon = useTransform(
+    distance,
+    [-150, 0, 150],
+    [20, 40, 20]
+  );
   const heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
