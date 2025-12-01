@@ -70,7 +70,7 @@ export const Dock = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-[10rem] w-full sticky bottom-0 z-50">
+    <div className="flex items-center justify-center h-[8rem] sm:h-[10rem] w-full sticky bottom-0 z-50 px-2 sm:px-4">
       <FloatingDock
         // mobileClassName="translate-y-20"
         items={links}
