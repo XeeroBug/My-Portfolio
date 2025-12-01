@@ -22,11 +22,6 @@ export function AboutMe() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             About Me
           </h2>
-          {/* <Image
-                src={MyPic.src}
-                alt="my-pic"
-                className="w-full h-full rounded-2xl sm:mx-auto"
-              /> */}
           <BackgroundGradient className="rounded-2xl sm:rounded-3xl lg:grid lg:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-6 md:p-10 bg-secondary">
             <div className="flex items-center justify-center w-full mb-4 sm:mb-6 lg:mb-0 max-w-xs sm:max-w-sm lg:max-w-none mx-auto lg:mx-0">
               <Image
@@ -38,13 +33,13 @@ export function AboutMe() {
               />
             </div>
             <p className="text-muted-foreground text-center lg:text-left col-span-2 text-base sm:text-lg md:text-xl lg:text-2xl lg:col-span-2 flex items-center px-2 sm:px-4">
-              Hi, I'm Usama Abdulhakeem, a passionate Full Stack Developer who
+              {`Hi, I'm Usama Abdulhakeem, a passionate Full Stack Developer who
               loves building secure, scalable, and user-friendly applications. I
               work with React, NextJs, NestJS, MongoDB and others to create
               clean, efficient solutions. I've had the privilege of serving at
               different organizations, where my work and technical contributions
               were highly appreciated. I'm a strong communicator, quick learner,
-              and always excited to take on challenges that drive real impact.
+              and always excited to take on challenges that drive real impact.`}
             </p>
           </BackgroundGradient>
         </motion.div>
