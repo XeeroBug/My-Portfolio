@@ -28,24 +28,27 @@ export function ProjectsSection() {
     },
   ];
   return (
-    <section className="py-20 px-4 bg-secondary/20" id="projects">
+    <section
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20"
+      id="projects"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Featured Projects
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg">
             Some of my recent work
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -63,42 +66,48 @@ export function ProjectsSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
                 </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed flex-1">
+                <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed flex-1">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
+                        className="px-2 sm:px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-3">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="gap-2 bg-transparent"
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto"
                       >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </Button>
-                    </a>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="gap-2 bg-transparent w-full sm:w-auto"
+                        >
+                          <Github className="w-4 h-4" />
+                          Code
+                        </Button>
+                      </a>
+                    )}
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="w-full sm:w-auto"
                     >
-                      <Button size="sm" className="gap-2">
+                      <Button size="sm" className="gap-2 w-full sm:w-auto">
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
                       </Button>
