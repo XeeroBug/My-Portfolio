@@ -47,7 +47,7 @@ const LoaderCore = ({
   value?: number;
 }) => {
   return (
-    <div className="flex relative justify-start max-w-xl mx-auto flex-col mt-40">
+    <div className="flex relative justify-start max-w-xl mx-auto flex-col mt-20 sm:mt-32 md:mt-40 px-4">
       {loadingStates.map((loadingState, index) => {
         const distance = Math.abs(index - value);
         const opacity = Math.max(1 - distance * 0.2, 0); // Minimum opacity is 0, keep it 0.2 if you're sane.
@@ -55,19 +55,19 @@ const LoaderCore = ({
         return (
           <motion.div
             key={index}
-            className={cn("text-left flex gap-2 mb-4")}
+            className={cn("text-left flex gap-2 mb-3 sm:mb-4")}
             initial={{ opacity: 0, y: -(value * 40) }}
             animate={{ opacity: opacity, y: -(value * 40) }}
             transition={{ duration: 0.5 }}
           >
-            <div>
+            <div className="flex-shrink-0">
               {index > value && (
-                <CheckIcon className="text-white dark:text-white" />
+                <CheckIcon className="text-white dark:text-white w-5 h-5 sm:w-6 sm:h-6" />
               )}
               {index <= value && (
                 <CheckFilled
                   className={cn(
-                    "text-white dark:text-white",
+                    "text-white dark:text-white w-5 h-5 sm:w-6 sm:h-6",
                     value === index &&
                       "text-primary dark:text-lime-500 opacity-100"
                   )}
@@ -76,7 +76,7 @@ const LoaderCore = ({
             </div>
             <span
               className={cn(
-                "text-white dark:text-white",
+                "text-white dark:text-white text-sm sm:text-base",
                 value === index && "text-primary dark:text-lime-500 opacity-100"
               )}
             >
@@ -134,7 +134,7 @@ export const MultiStepLoader = ({
           }}
           className="w-full h-full fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-2xl"
         >
-          <div className="h-96  relative">
+          <div className="h-64 sm:h-80 md:h-96 relative w-full max-w-2xl">
             <LoaderCore value={currentState} loadingStates={loadingStates} />
           </div>
 
