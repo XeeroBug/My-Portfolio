@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Testimonial } from "./mentors";
-import MyPic from "@/assets/images/animated-pic.png";
+import MyPic from "@/assets/images/image.png";
 import { BackgroundGradient } from "./ui/background-gradient";
 import Image from "next/image";
 
