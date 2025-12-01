@@ -31,7 +31,17 @@ export default function Page() {
         <ContactSection />
       </main>
       <Dock />
-      <ToastContainer position="top-right" autoClose={3000} />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        style={{
+          top: "1rem",
+          right: "1rem",
+        }}
+        toastStyle={{
+          fontSize: "0.875rem",
+        }}
+      />
     </>
   );
 }
