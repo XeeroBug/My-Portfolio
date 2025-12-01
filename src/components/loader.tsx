@@ -32,7 +32,7 @@ const loadingStates = [
 
 export function MultiStepLoader() {
   return (
-    <div className="w-full h-[60vh] flex items-center justify-center">
+    <div className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-center px-4">
       <Loader loadingStates={loadingStates} duration={1000} loading={true} />
     </div>
   );
